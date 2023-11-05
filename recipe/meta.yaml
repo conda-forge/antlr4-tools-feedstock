@@ -1,5 +1,5 @@
 {% set name = "antlr4-tools" %}
-{% set version = "0.2" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/antlr4-tools-{{ version }}.tar.gz
-  sha256: 9e44b636fec5c6daf890d479378b6fe684b62de32084baeabaf51c352fd9a7e0
+  sha256: eabad95c7d6b2e15b9875f630e6695395f90ed557721aeef7844d5821ac1ca6a
 
 build:
   entry_points:
