@@ -21,9 +21,10 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
+    - setuptools
   run:
     - python >={{ python_min }}
-# setup.py requires install-jdk to pass pip check, added install-jdk to requirements run section.     
+    # setup.py requires install-jdk to pass pip check, added install-jdk to requirements run section.     
     - install-jdk
     - openjdk
 
@@ -31,7 +32,7 @@ test:
   imports:
     - antlr4_tool_runner
   commands:
-# setup.py requires install-jdk to pass pip check, added install-jdk to requirements run section.     
+    # setup.py requires install-jdk to pass pip check, added install-jdk to requirements run section.     
     - pip check
     #- antlr4 --help
     - antlr4-parse --help
