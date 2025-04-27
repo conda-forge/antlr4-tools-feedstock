@@ -1,13 +1,13 @@
 {% set name = "antlr4-tools" %}
-{% set version = "0.2.1" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/antlr4-tools-{{ version }}.tar.gz
-  sha256: eabad95c7d6b2e15b9875f630e6695395f90ed557721aeef7844d5821ac1ca6a
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 8af6fba512fc168e48eb93690ed21bdbe8848ed812d12b365d9d259a26ad6ba3
 
 build:
   entry_points:
@@ -15,7 +15,7 @@ build:
     - antlr4-parse=antlr4_tool_runner:interp
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
